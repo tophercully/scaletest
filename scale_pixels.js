@@ -14,6 +14,8 @@ Even the MARGIN can be fixed in pixels in this case. But I probably want to chan
 
 */
 
+
+
 C=window.document.body.appendChild(window.document.createElement("canvas"));
 X=C.getContext("2d");
 S=1;  // this is a seed for the PRNG (line below). In this example, use a fixed seed, so every output will be identical
@@ -44,6 +46,19 @@ C.width=WIDTH;
 C.height=HEIGHT;
 C.style = "position:absolute; display:block; bottom:0; top:0; left:0; right:0; width:auto; margin:auto; height:100%";
 document.body.style.background = 'lightblue';
+
+//handle canvas css 
+function cssHandler() {
+    if(WIDTH < window.innerWidth) {
+        C.style.width = "100%"
+    } else if( HEIGHT < window.innerHeight) {
+        C.style.height = "100%"
+    }
+}
+cssHandler()
+
+window.addEventListener('resize', cssHandler)
+
 
 X.fillStyle='#444';
 X.fillRect(0,0,WIDTH, HEIGHT);
