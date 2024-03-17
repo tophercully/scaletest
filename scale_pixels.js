@@ -44,7 +44,7 @@ STEP_Y = (HEIGHT-2*MARGIN)/CELLS_PER_COLUMN;
 
 C.width=WIDTH;
 C.height=HEIGHT;
-C.style = "position:absolute; display:block; bottom:0; top:0; left:0; right:0; width:auto; margin:auto; height:100%";
+// C.style = "position:absolute; display:block; bottom:0; top:0; left:0; right:0; width:auto; margin:auto; height:100%";
 document.body.style.background = 'lightblue';
 
 //handle canvas css 
